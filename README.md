@@ -3,6 +3,9 @@
 Finds the middle of a set of cities — the geographic **centre of mass** — and draws it
 on a world map as a circular search area with a centre marker.
 
+> ![NOTE]
+> Yes, it is completey vibe-coded, except for this line.
+
 ## Run
 
 ```bash
