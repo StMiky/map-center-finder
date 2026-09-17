@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Map Center Finder</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside id="panel">
+  <header>
+    <h1>Map Center Finder</h1>
+    <p class="sub">Add cities, find the middle.</p>
+  </header>
+
+  <section id="cities"></section>
+
+  <button id="add-city" class="ghost">+ Add city</button>
+
+  <section class="controls">
+    <label for="spread">
+      Search area
+      <output id="spread-out">—</output>
+    </label>
+    <input type="range" id="spread" min="5" max="150" step="5" value="35">
+    <p class="hint">Radius as a share of the average distance from the centre.</p>
+  </section>
+
+  <button id="find" class="primary" disabled>Find the centre</button>
+
+  <section id="result" hidden>
+    <h2>Centre of mass</h2>
+    <p id="result-place" class="place">—</p>
+    <p id="result-coords" class="coords">—</p>
+    <ul id="result-distances"></ul>
+    <div class="result-actions">
+      <button id="zoom-center" class="ghost small">Zoom to centre</button>
+      <button id="zoom-all" class="ghost small">Show all cities</button>
+    </div>
+  </section>
+
+  <p id="status" class="status" role="status"></p>
+</aside>
+
+<main id="map"></main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
